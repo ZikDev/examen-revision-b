@@ -7,6 +7,10 @@
     border-radius: 5px;
     color: #003566;
     box-shadow: 0px 0px 4px 0px rgba(#003566, 0.25);
+    animation-name: changeShadow;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
   }
 
   .loader {
@@ -18,5 +22,40 @@
     background: #ffbe0b;
     border-radius: 50px;
     color: #fff;
+    animation-name: changeColor;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes changeShadow {
+    from {
+      box-shadow: 0px 0px 4px 0px rgba(#003566, 0.25);
+    }
+
+    50% {
+      box-shadow: 0px 0px 4px 6px rgba(#003566, 0.25);
+    }
+
+    to {
+      box-shadow: 0px 0px 4px 0px rgba(#003566, 0.25);
+    }
+  }
+
+  @keyframes changeColor {
+    from {
+      background: #ffbe0b;
+    }
+
+    33% {
+      background: #ff006e;
+    }
+
+    66% {
+      background: #8338ec;
+    }
+
+    to {
+      background: #ffbe0b;
+    }
   }
 }
